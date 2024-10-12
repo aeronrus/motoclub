@@ -1,0 +1,13 @@
+.about__item {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.about__item img {
+  width: 5rem;
+  height: 5rem;
+}

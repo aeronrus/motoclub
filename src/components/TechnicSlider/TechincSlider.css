@@ -1,0 +1,46 @@
+.technicSlider {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.technicSlider__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.technicSliderList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.technicSlide {
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 0 0 rgba(0 0 0 / 40%);
+  border: 0px solid rgb(220, 220, 221);
+}
+.technicSlide.active {
+  opacity: 1;
+  border-width: 0.8px;
+  box-shadow: 2px 4px 8px rgba(0 0 0 / 40%);
+}
+
+.technicSlide.active img {
+  display: block;
+}
+
+.technicSlide:not(.active) img {
+  display: none; /* Скрываем изображение в неактивных слайдах */
+}
+
+.technicSlide img {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+  object-position: center -1px;
+}

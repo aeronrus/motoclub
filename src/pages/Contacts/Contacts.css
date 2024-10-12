@@ -1,0 +1,15 @@
+.contact {
+  height: 30rem;
+  && a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  && a:hover {
+    text-shadow: 0 0 10px #060606;
+  }
+}
+
+.contacts__title {
+  font-size: 2.5rem;
+}

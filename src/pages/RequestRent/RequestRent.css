@@ -1,0 +1,119 @@
+@charset "UTF-8";
+.request-rent {
+  background-image: url('../../assets/helpers/background-request.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.request-rent__title {
+  color: azure;
+  font-family: 'TTBold';
+  font-size: 2.5rem;
+  text-shadow: 1.7px 1.7px #eb3d11;
+  line-height: 5px;
+}
+
+.request-rent__description {
+  color: rgb(253, 253, 253);
+}
+.request-rent__description p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: 1.7px 1.7px #eb3d11;
+}
+
+/*-------------------request-rent-form  и request-rent-big-form--------------*/
+.request-rent__form {
+  background-color: white;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+.request-rent__form p {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.request-rent__item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.request-rent__item label {
+  font-size: 1.1rem;
+}
+.request-rent__item input:not([type='checkbox']),
+.request-rent__item textarea {
+  width: 270px;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #191919;
+  resize: none;
+}
+
+.request-rent__checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.real-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.real-checkbox:focus + .custom-checkbox {
+  box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #7e9bbd;
+  border-radius: 4px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.custom-checkbox::before {
+  content: '';
+  /* Рисуем галочку */
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: url('../../assets/helpers/check.svg');
+  background-repeat: no-repeat;
+  /* Выравниваем по центру */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  margin-top: 1px;
+  transition: 0.2s ease-in;
+}
+
+/*
+Активируем фейковый / декоративный чекбокс
+*/
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/*# sourceMappingURL=request-rent__form.css.map */

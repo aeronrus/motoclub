@@ -1,0 +1,57 @@
+.service {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 450px; /* Ширина блока */
+  margin: 10px; /* Отступы между блоками */
+  padding: 15px;
+  display: flex;
+  flex-direction: column; /* Располагаем элементы в колонку */
+  opacity: 0; /* Начальное состояние для анимации */
+  transform: translateY(20px); /* Начальная позиция для анимации */
+  animation: fadeIn 0.4s forwards; /* Анимация появления */
+}
+
+.service__img {
+  max-width: 100%; /* Изображение по ширине блока */
+  border-radius: 8px;
+  height: 350px;
+  box-shadow: 0 0.3rem 1rem 0.25rem hsla(0, 0%, 0%, 0.25);
+}
+
+.service__title {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.service_description {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.service_price {
+  margin-top: auto; /* Отодвигаем цены вниз */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Конечное состояние для анимации */
+    transform: translateY(0); /* Возвращаем в исходное положение */
+  }
+}
+/* Задержка для каждого блока при появлении */
+.service:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.service:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.service:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/*# sourceMappingURL=services.css.map */

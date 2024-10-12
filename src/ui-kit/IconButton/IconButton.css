@@ -1,0 +1,31 @@
+.iconButton {
+  text-align: center;
+  --size: 100px;
+  min-width: var(--size);
+  height: var(--size);
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.iconButton.left,
+.iconButton.left.disable {
+  background: url('../../assets/helpers/arrow_left.svg') center/100% 100% no-repeat;
+}
+
+.iconButton.right,
+.iconButton.right.disable {
+  color: var(--gradient);
+  background: url('../../assets/helpers/arrow_right.svg') center/100% 100% no-repeat;
+}
+
+.iconButton.left:hover {
+  background: url('../../assets/helpers/arrow_left_active.svg') center/100% 100% no-repeat;
+}
+.iconButton.right:hover {
+  background: url('../../assets/helpers/arrow_right_active.svg') center/100% 100% no-repeat;
+}
+
+.iconButton.left.disable,
+.iconButton.right.disable {
+  pointer-events: none;
+}

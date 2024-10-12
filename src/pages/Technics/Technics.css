@@ -1,0 +1,85 @@
+.bikes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.bike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bike__title {
+  font-size: 50px;
+}
+.bike__subtitle {
+  color: rgb(227, 13, 13);
+  font-weight: 600;
+  opacity: 0.7;
+}
+.bike__price {
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.bike__price :first-child {
+  margin-bottom: -20px;
+  font-size: 20px;
+  text-decoration: line-through;
+  color: red;
+}
+.bike__description {
+  opacity: 0.6;
+  font-weight: 900;
+}
+
+.bike__description > *:not(:last-child) * {
+  margin-bottom: -10px;
+}
+
+/*Slider*/
+.slider-wrapper {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem 0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: scale-down;
+}
+
+.slider_nav {
+  display: flex;
+  column-gap: 2rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider_nav a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgb(86, 83, 83);
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider_nav a:hover {
+  opacity: 1;
+  background-color: black;
+}

@@ -1,0 +1,11 @@
+:root {
+  --gradient: linear-gradient(to right, #ab5bfb, #7690ea);
+}
+
+.gradientTitle {
+  margin: 0 auto;
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

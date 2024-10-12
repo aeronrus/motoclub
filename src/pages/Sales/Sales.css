@@ -1,0 +1,6 @@
+.sales__description {
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

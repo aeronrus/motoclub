@@ -1,0 +1,42 @@
+.scrolling-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 40vh; /* Высота блока равна высоте экрана */
+  overflow: hidden;
+}
+
+.scrolling-background__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/helpers/background.jpg'); /* Замените на свой URL */
+  background-size: cover;
+  background-attachment: fixed; /* Фиксируем фон */
+}
+
+@keyframes scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.scrolling-background__background--black {
+  background-color: rgb(44, 42, 42);
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.scrolling-background__content {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
