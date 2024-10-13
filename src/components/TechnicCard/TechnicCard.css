@@ -1,0 +1,33 @@
+.bike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bike__title {
+  font-size: 50px;
+}
+.bike__subtitle {
+  color: rgb(227, 13, 13);
+  font-weight: 600;
+  opacity: 0.7;
+}
+.bike__price {
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.bike__price :first-child {
+  margin-bottom: -20px;
+  font-size: 20px;
+  text-decoration: line-through;
+  color: red;
+}
+.bike__description {
+  opacity: 0.6;
+  font-weight: 900;
+}
+
+.bike__description > *:not(:last-child) * {
+  margin-bottom: -10px;
+}

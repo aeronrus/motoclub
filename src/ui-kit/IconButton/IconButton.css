@@ -1,6 +1,6 @@
 .iconButton {
   text-align: center;
-  --size: 100px;
+  --size: 50px;
   min-width: var(--size);
   height: var(--size);
   margin: 0 auto;

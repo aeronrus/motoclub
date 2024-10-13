@@ -3,9 +3,7 @@ import IconButton from '../../ui-kit/IconButton/IconButton';
 import './TechincSlider.css';
 
 interface ITechnicSliderProps {
-  data: {
-    img: string;
-  }[];
+  data: string[];
 }
 
 const TechnicSlider: React.FC<ITechnicSliderProps> = ({ data }) => {
@@ -37,7 +35,7 @@ const TechnicSlider: React.FC<ITechnicSliderProps> = ({ data }) => {
       <div className="technicSliderList">
         {data.map((item, id) => (
           <div key={id} className={`${activeId === id ? 'technicSlide active' : 'technicSlide'}`}>
-            <img src={item.img} alt="item-img" />
+            <img src={item} alt="item-img" />
           </div>
         ))}
       </div>
