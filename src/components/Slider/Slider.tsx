@@ -44,7 +44,7 @@ const Slider: React.FC<ISliderProps> = ({ data }) => {
               <div className="slide__title">{slide.title}</div>
               <div className="slide__description">{slide.description}</div>
             </div>
-            <img src={slide.img} />
+            <img src={slide.img} alt="slide.title" />
           </div>
         ))}
       </div>

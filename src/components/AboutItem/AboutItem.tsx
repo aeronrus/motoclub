@@ -1,5 +1,4 @@
 import React from 'react';
-import RequestButton from '../../ui-kit/RequestButton/RequestButton';
 import './AboutItem.css';
 
 interface IAboutItemProps {
@@ -11,7 +10,7 @@ interface IAboutItemProps {
 const AboutItem: React.FC<IAboutItemProps> = ({ aboutItem }) => {
   return (
     <div className="about__item">
-      <img src={aboutItem.img} />
+      <img src={aboutItem.img} alt={aboutItem.description} />
       <p>{aboutItem.description}</p>
     </div>
   );

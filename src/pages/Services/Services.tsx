@@ -1,6 +1,5 @@
 import React from 'react';
 import './Services.css';
-import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import ServicesList from '../../modules/ServicesList/ServicesList';
 
 const Services: React.FC = () => {
