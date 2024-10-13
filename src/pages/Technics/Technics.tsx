@@ -14,6 +14,7 @@ import kayo2 from '../../assets/kayo k1/kayo2.jpg';
 import RequestButton from '../../ui-kit/RequestButton/RequestButton';
 
 import './Technics.css';
+import TechnicSlider from '../../components/TechnicSlider/TechnicSlider';
 
 export const Technics: React.FC = () => {
   return (
@@ -33,8 +34,8 @@ export const Technics: React.FC = () => {
                 <img id="slide-2" src={bse1102} alt="bse1102" />
               </div>
               <div className="slider_nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
+                <a href="#slide-1" aria-label="Go to Slide 1"></a>
+                <a href="#slide-2" aria-label="Go to Slide 1"></a>
               </div>
             </div>
 
@@ -58,8 +59,8 @@ export const Technics: React.FC = () => {
                 <img id="slide-4" src={bse1252} alt="bse1252" />
               </div>
               <div className="slider_nav">
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
+                <a href="#slide-3" aria-label="Go to Slide 1"></a>
+                <a href="#slide-4" aria-label="Go to Slide 1"></a>
               </div>
             </div>
             <div className="bike__price">
@@ -83,8 +84,8 @@ export const Technics: React.FC = () => {
                 <img id="slide-8" src={pitrace1402} alt="pitrace1402" />
               </div>
               <div className="slider_nav">
-                <a href="#slide-7"></a>
-                <a href="#slide-8"></a>
+                <a href="#slide-7" aria-label="Go to Slide 1"></a>
+                <a href="#slide-8" aria-label="Go to Slide 1"></a>
               </div>
             </div>
             <div className="bike__price">
@@ -108,8 +109,8 @@ export const Technics: React.FC = () => {
                 <img id="slide-6" src={kayo2} alt="kayo k1(2)" />
               </div>
               <div className="slider_nav">
-                <a href="#slide-5"></a>
-                <a href="#slide-6"></a>
+                <a href="#slide-5" aria-label="Go to Slide 1"></a>
+                <a href="#slide-6" aria-label="Go to Slide 1"></a>
               </div>
             </div>
             <div className="bike__price">
@@ -124,6 +125,7 @@ export const Technics: React.FC = () => {
             <RequestButton title="Записаться" />
           </div>
         </div>
+        <TechnicSlider data={[{ img: bse1101 }, { img: bse1251 }, { img: pitrace1401 }]} />
       </div>
     </section>
   );
