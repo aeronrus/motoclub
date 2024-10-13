@@ -14,7 +14,6 @@ import kayo2 from '../../assets/kayo k1/kayo2.jpg';
 import RequestButton from '../../ui-kit/RequestButton/RequestButton';
 
 import './Technics.css';
-import TechnicSlider from '../../components/TechnicSlider/TechnicSlider';
 
 export const Technics: React.FC = () => {
   return (
@@ -125,7 +124,6 @@ export const Technics: React.FC = () => {
             <RequestButton title="Записаться" />
           </div>
         </div>
-        <TechnicSlider data={[{ img: bse1101 }, { img: bse1251 }, { img: pitrace1401 }]} />
       </div>
     </section>
   );
