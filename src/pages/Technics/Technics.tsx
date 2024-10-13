@@ -29,14 +29,7 @@ export const Technics: React.FC = () => {
             <p className="bike__subtitle">Устройте праздник вашему ребенку!</p>
 
             <div className="slider-wrapper">
-              <div className="slider">
-                <img id="slide-1" src={bse1101} alt="bse1101" />
-                <img id="slide-2" src={bse1102} alt="bse1102" />
-              </div>
-              <div className="slider_nav">
-                <a href="#slide-1" aria-label="Go to Slide 1"></a>
-                <a href="#slide-2" aria-label="Go to Slide 1"></a>
-              </div>
+              <TechnicSlider data={[{ img: bse1101 }, { img: bse1102 }]} />
             </div>
 
             <div className="bike__price">
@@ -54,14 +47,7 @@ export const Technics: React.FC = () => {
             <div className="bike__title">Подростковый питбайк 125см3</div>
             <p className="bike__subtitle">Лучший способ освоить азы управления</p>
             <div className="slider-wrapper">
-              <div className="slider">
-                <img id="slide-3" src={bse1251} alt="bse1251" />
-                <img id="slide-4" src={bse1252} alt="bse1252" />
-              </div>
-              <div className="slider_nav">
-                <a href="#slide-3" aria-label="Go to Slide 1"></a>
-                <a href="#slide-4" aria-label="Go to Slide 1"></a>
-              </div>
+              <TechnicSlider data={[{ img: bse1251 }, { img: bse1252 }]} />
             </div>
             <div className="bike__price">
               <p>2100руб</p>
@@ -79,14 +65,7 @@ export const Technics: React.FC = () => {
             <div className="bike__title">Подростковый питбайк 140см3</div>
             <p className="bike__subtitle">Подарит эмоции как детям, так и взрослым</p>
             <div className="slider-wrapper">
-              <div className="slider">
-                <img id="slide-7" src={pitrace1401} alt="pitrace1401" />
-                <img id="slide-8" src={pitrace1402} alt="pitrace1402" />
-              </div>
-              <div className="slider_nav">
-                <a href="#slide-7" aria-label="Go to Slide 1"></a>
-                <a href="#slide-8" aria-label="Go to Slide 1"></a>
-              </div>
+              <TechnicSlider data={[{ img: pitrace1401 }, { img: pitrace1402 }]} />
             </div>
             <div className="bike__price">
               <p>2400руб</p>
@@ -104,14 +83,7 @@ export const Technics: React.FC = () => {
             <div className="bike__title">Эндуро 250см3</div>
             <p className="bike__subtitle">Не оставит равнодушным новичков и опытных райдеров</p>
             <div className="slider-wrapper">
-              <div className="slider">
-                <img id="slide-5" src={kayo1} alt="kayo k1(1)" />
-                <img id="slide-6" src={kayo2} alt="kayo k1(2)" />
-              </div>
-              <div className="slider_nav">
-                <a href="#slide-5" aria-label="Go to Slide 1"></a>
-                <a href="#slide-6" aria-label="Go to Slide 1"></a>
-              </div>
+              <TechnicSlider data={[{ img: kayo1 }, { img: kayo2 }]} />
             </div>
             <div className="bike__price">
               <p>3000руб</p>
@@ -125,7 +97,6 @@ export const Technics: React.FC = () => {
             <RequestButton title="Записаться" />
           </div>
         </div>
-        <TechnicSlider data={[{ img: bse1101 }, { img: bse1251 }, { img: pitrace1401 }]} />
       </div>
     </section>
   );
