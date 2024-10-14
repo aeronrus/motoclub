@@ -35,3 +35,10 @@ jobs:
 
       - name: e2e test
         run: npm run test:e2e
+
+  secret:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print secret
+        run: echo ${{secrets.TEST}}
