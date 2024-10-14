@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Einit:
+  init:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,6 +25,7 @@ jobs:
         run: npm run build
 
   test:
+    needs: [init]
     runs-on: ubuntu-latest
     steps:
       - name: e2e test
