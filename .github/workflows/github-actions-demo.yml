@@ -18,11 +18,14 @@ jobs:
       - name: build storybook
         run: npm run build:storybook
 
-      - name: e2e test
-        run: npm run test:e2e
-
       - name: lint code
         run: npm run lint
 
       - name: build project
         run: npm run build
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: e2e test
+        run: npm run test:e2e
