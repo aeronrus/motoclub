@@ -28,5 +28,8 @@ jobs:
     needs: [init]
     runs-on: ubuntu-latest
     steps:
+      - name: install modules
+        run: npm install
+
       - name: e2e test
         run: npm run test:e2e
