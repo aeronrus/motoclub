@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
+import Header from '../../modules/Header/Header';
 import About from '../About/About';
 import Achievements from '../Achievements/Achievements';
 import ScrollingBackground from '../../components/ScrollingBackground/ScrollingBackground';

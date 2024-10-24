@@ -1,0 +1,47 @@
+@charset "UTF-8";
+nav {
+  width: 100vw;
+}
+
+.nav {
+  position: static;
+  font-family: 'TTBold';
+  background-color: #050505;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.link {
+  text-decoration: none;
+}
+.nav__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav__item {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 60px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav__item:hover {
+  transform: scale(1.1);
+  color: #ff0d00;
+}
+
+@media (max-width: 1120px) {
+  .nav__item {
+    padding: 15px 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav__item {
+    font-size: 18px;
+    padding: 10px 27px;
+  }
+}

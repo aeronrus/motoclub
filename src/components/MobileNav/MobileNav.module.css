@@ -1,0 +1,78 @@
+@charset "UTF-8";
+.nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'TTBold';
+  font-size: 22px;
+  display: flex;
+}
+nav {
+  z-index: 2;
+}
+.nav__list {
+  display: none; /* Скрываем по умолчанию */
+}
+
+.nav__list.active {
+  display: flex; /* Показываем при активации */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/helpers/mobileNav.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+.nav__list.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
+  z-index: 1; /* Убедитесь, что он под текстом */
+}
+
+.nav__toggle {
+  position: fixed;
+  left: 2vw; /* Используем vw для адаптивного позиционирования */
+  top: 2vh; /* Используем vh для адаптивного позиционирования */
+  width: 10vw; /* Ширина в процентах от ширины окна */
+  height: 10vw; /* Высота в процентах от ширины окна */
+  background-color: #050505;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 3;
+}
+.nav__toggle div {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #f4efef;
+}
+
+.nav__item:active {
+  transform: scale(1.1);
+  color: #ff0d00;
+}
+
+.link {
+  text-decoration: none;
+  z-index: 3;
+}
+.nav__item {
+  color: #fff;
+  padding: 2vh 5vw;
+  transition: transform 0.3s, color 0.3s;
+}
