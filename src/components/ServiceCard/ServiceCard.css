@@ -3,14 +3,14 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 450px; /* Ширина блока */
+  max-width: 450px; /* Ширина блока */
   margin: 10px; /* Отступы между блоками */
   padding: 15px;
   display: flex;
   flex-direction: column; /* Располагаем элементы в колонку */
   opacity: 0; /* Начальное состояние для анимации */
   transform: translateY(20px); /* Начальная позиция для анимации */
-  animation: fadeIn 0.4s forwards; /* Анимация появления */
+  animation: fadeIn 0.4s forwards;
 }
 
 .service__img {
@@ -26,7 +26,7 @@
   font-size: 22px;
 }
 
-.service_description {
+.service__description {
   margin: 10px 0;
   font-size: 18px;
 }
@@ -54,4 +54,21 @@
   animation-delay: 0.8s;
 }
 
-/*# sourceMappingURL=services.css.map */
+@media (max-width: 1050px) {
+  .service__img {
+    height: 300px;
+  }
+}
+@media (max-width: 450px) {
+  .service__img {
+    height: 250px;
+  }
+
+  .service__title {
+    font-size: 20px;
+  }
+
+  .service__description {
+    font-size: 16px;
+  }
+}

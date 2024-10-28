@@ -4,6 +4,8 @@ import RequestButton from '../../ui-kit/RequestButton/RequestButton';
 import './TechnicCard.css';
 import PriceSale from '../../ui-kit/PriceSale/PriceSale';
 import TechnicSlider from '../TechnicSlider/TechnicSlider';
+import Title from '../../ui-kit/Title/Title';
+import Description from '../../ui-kit/Description/Description';
 
 interface ITechnicCardProps {
   technicData: {
@@ -17,18 +19,19 @@ interface ITechnicCardProps {
 
 const TechnicCard: React.FC<ITechnicCardProps> = ({ technicData }) => {
   return (
-    <div className="bike">
-      <div className="bike__title">{technicData.title}</div>
-      <p className="bike__subtitle">{technicData.subtitle}</p>
+    <div className="technic">
+      <Title title={technicData.title} />
+      <p className="technic__subtitle">{technicData.subtitle}</p>
 
       <div className="slider-wrapper">
         <TechnicSlider data={technicData.img} />
       </div>
-
-      <PriceSale prices={technicData.price} />
-      <div className="bike__description">
+      <div className="technic__price">
+        <PriceSale prices={technicData.price} />
+      </div>
+      <div className="technic__description">
         {technicData.description.map((item) => (
-          <p>{item}</p>
+          <Description description={item} />
         ))}
       </div>
       <RequestButton title="Записаться" />

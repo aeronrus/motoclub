@@ -33,20 +33,22 @@ const Slider: React.FC<ISliderProps> = ({ data }) => {
 
   return (
     <div className="container">
-      <div className="slider__actions">
-        <IconButton direction="left" onClick={prev} disable={activeId === 0} />
-        <IconButton direction="right" onClick={next} disable={activeId === data.length - 1} />
-      </div>
-      <div className="slider">
-        {data.map((slide, id) => (
-          <div key={id} className={`slide${id === activeId ? ' active' : ''}`}>
-            <div className="slide__info">
-              <div className="slide__title">{slide.title}</div>
-              <div className="slide__description">{slide.description}</div>
+      <div className="slider-wrap">
+        <div className="slider__actions">
+          <IconButton direction="left" onClick={prev} disable={activeId === 0} />
+          <IconButton direction="right" onClick={next} disable={activeId === data.length - 1} />
+        </div>
+        <div className="slider">
+          {data.map((slide, id) => (
+            <div key={id} className={`slide${id === activeId ? ' active' : ''}`}>
+              <div className="slide__info">
+                <div className="slide__title">{slide.title}</div>
+                <div className="slide__description">{slide.description}</div>
+              </div>
+              <img src={slide.img} alt="slide.title" />
             </div>
-            <img src={slide.img} alt="slide.title" />
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

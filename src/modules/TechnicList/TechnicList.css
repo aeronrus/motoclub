@@ -4,3 +4,8 @@
   align-items: center;
   gap: 35px;
 }
+@media (max-width: 470px) {
+  .bikes-list {
+    gap: 10px;
+  }
+}

@@ -1,10 +1,7 @@
-.slider-wrap {
-}
-
 .slider {
   display: flex;
   width: 90vw;
-  gap: 15px;
+  gap: 10px;
 }
 
 .slide {
@@ -18,13 +15,14 @@
   box-shadow: 0 0 0 rgba(0 0 0 / 40%);
   border: 0px solid rgb(220, 220, 221);
 }
+
 .slide.active {
-  flex-grow: 3;
+  flex-grow: 2;
   border-width: 0.8px;
   box-shadow: 2px 4px 8px rgba(0 0 0 / 40%);
 }
 .slide img {
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
   height: 100%;
   object-position: center -1px;
@@ -39,12 +37,14 @@
 
 .slide__info {
   position: absolute;
-  left: 20px;
-  top: 30px;
+  left: 50%; /* Перемещаем блок на 50% от ширины родителя */
+  top: 30px; /* Положение сверху */
+  transform: translateX(-50%); /* Смещаем блок влево на половину его ширины */
   white-space: nowrap;
   opacity: 0;
   transition: 0.5s;
 }
+
 .slide.active .slide__info {
   opacity: 1;
 }
@@ -52,12 +52,46 @@
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.1px rgb(142, 8, 244); /* Обводка текста белым цветом */
   font-weight: bold;
-  font-size: 12px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
 .slide__title {
   font-size: 26px;
   font-weight: bold;
+  color: white; /* Основной цвет текста */
+  -webkit-text-stroke: 1px black; /* Обводка текста */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+    /* Светлое свечение */ 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 600px) {
+  .slide.active {
+    flex-grow: 8;
+    border-width: 0.8px;
+    box-shadow: 2px 4px 8px rgba(0 0 0 / 40%);
+  }
+
+  .slider {
+    gap: 5px;
+  }
+  .slide {
+    height: 450px; /* Еще меньше высота на очень маленьких экранах */
+  }
+
+  .slide__title {
+    font-size: 18px; /* Уменьшение размера заголовка */
+  }
+
+  .slide__description {
+    font-size: 12px; /* Уменьшение размера описания */
+  }
+}
+
+@media (max-width: 380px) {
+  .slide {
+    height: 350px; /* Еще меньше высота на очень маленьких экранах */
+  }
 }
