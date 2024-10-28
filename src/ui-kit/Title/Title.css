@@ -1,0 +1,10 @@
+.title {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90vw;
+}
+@media (max-width: 450px) {
+  .title {
+    font-size: 23px;
+  }
+}

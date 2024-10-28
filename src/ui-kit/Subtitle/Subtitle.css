@@ -1,0 +1,10 @@
+.subtitle {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90vw;
+}
+@media (max-width: 450px) {
+  .subtitle {
+    font-size: 20px;
+  }
+}
