@@ -2,3 +2,14 @@
   font-size: 1.8rem;
   font-family: 'TTBold';
 }
+
+@media (max-width: 600px) {
+  .contacts__geo {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 450px) {
+  .contacts__geo {
+    font-size: 1.2rem;
+  }
+}

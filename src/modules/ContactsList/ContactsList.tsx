@@ -1,8 +1,8 @@
 import React from 'react';
-import './ContactList.css';
+import './ContactsList.css';
 import ContactItem from '../../components/ContactItem/ContactItem';
 
-const ContactList: React.FC = () => {
+const ContactsList: React.FC = () => {
   const phoneNumbers = ['+7 911 196-15-20', '+7 911 659-76-74'];
 
   return (
@@ -14,4 +14,4 @@ const ContactList: React.FC = () => {
   );
 };
 
-export default ContactList;
+export default ContactsList;

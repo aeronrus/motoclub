@@ -10,7 +10,7 @@ const ContactsGeo: React.FC<IContactsGeo> = ({ location }) => {
 
   return (
     <div className="contacts__geo">
-      Мы находимся здесь
+      Мы находимся здесь:
       <span role="img" aria-label="Геопозиция">
         📍
       </span>

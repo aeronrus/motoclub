@@ -6,7 +6,7 @@ interface IContactItemProps {
 
 const ContactItem: React.FC<IContactItemProps> = ({ phoneNumber }) => {
   return (
-    <div className="contact-item">
+    <div className="contact__item">
       <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
       <span role="img" aria-label="phone">
         📞

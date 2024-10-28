@@ -15,7 +15,7 @@ const AboutList: React.FC = () => {
   ];
 
   return (
-    <div className="about__items">
+    <div className="about__list">
       {aboutDataList.map((item, index) => {
         return <AboutItem key={index} aboutItem={item} />;
       })}

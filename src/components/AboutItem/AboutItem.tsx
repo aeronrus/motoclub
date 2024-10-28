@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutItem.css';
+import Description from '../../ui-kit/Description/Description';
 
 interface IAboutItemProps {
   aboutItem: {
@@ -11,7 +12,7 @@ const AboutItem: React.FC<IAboutItemProps> = ({ aboutItem }) => {
   return (
     <div className="about__item">
       <img src={aboutItem.img} alt={aboutItem.description} />
-      <p>{aboutItem.description}</p>
+      <Description description={aboutItem.description} />
     </div>
   );
 };
