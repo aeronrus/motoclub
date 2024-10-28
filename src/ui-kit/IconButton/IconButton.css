@@ -29,3 +29,10 @@
 .iconButton.right.disable {
   pointer-events: none;
 }
+@media (max-width: 600px) {
+  .iconButton {
+    --size: 40px;
+    min-width: var(--size);
+    height: var(--size);
+  }
+}
