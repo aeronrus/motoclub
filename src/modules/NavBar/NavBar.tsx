@@ -15,8 +15,6 @@ const NavBar: React.FC = () => {
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
   };
-  console.debug(window.innerWidth);
-  console.debug(isMobile);
 
   return isMobile ? <MobileNav /> : <DesktopNav />;
 };
