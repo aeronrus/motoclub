@@ -66,14 +66,20 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
     /* Светлое свечение */ 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
 }
-
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .slide.active {
-    flex-grow: 8;
+    flex-grow: 5;
     border-width: 0.8px;
     box-shadow: 2px 4px 8px rgba(0 0 0 / 40%);
   }
+}
 
+@media (max-width: 700px) {
+  .slide.active {
+    flex-grow: 3;
+    border-width: 0.8px;
+    box-shadow: 2px 4px 8px rgba(0 0 0 / 40%);
+  }
   .slider {
     gap: 5px;
   }
@@ -87,6 +93,14 @@
 
   .slide__description {
     font-size: 12px; /* Уменьшение размера описания */
+  }
+}
+
+@media (max-width: 600px) {
+  .slide.active {
+    flex-grow: 8;
+    border-width: 0.8px;
+    box-shadow: 2px 4px 8px rgba(0 0 0 / 40%);
   }
 }
 
