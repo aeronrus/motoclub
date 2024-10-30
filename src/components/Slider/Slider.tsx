@@ -35,8 +35,13 @@ const Slider: React.FC<ISliderProps> = ({ data }) => {
     <div className="container">
       <div className="slider-wrap">
         <div className="slider__actions">
-          <IconButton direction="left" onClick={prev} disable={activeId === 0} />
-          <IconButton direction="right" onClick={next} disable={activeId === data.length - 1} />
+          <IconButton key="left" direction="left" onClick={prev} disable={activeId === 0} />
+          <IconButton
+            key="right"
+            direction="right"
+            onClick={next}
+            disable={activeId === data.length - 1}
+          />
         </div>
         <div className="slider">
           {data.map((slide, id) => (
