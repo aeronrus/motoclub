@@ -3,12 +3,13 @@ import './RequestButton.css';
 
 interface IRequestButtonProps {
   title: string;
+  onClick?: () => void;
 }
 
-const RequestButton: React.FC<IRequestButtonProps> = ({ title }) => {
+const RequestButton: React.FC<IRequestButtonProps> = ({ title, onClick }) => {
   return (
     <>
-      <button className="request-btn">
+      <button className="request-btn" onClick={onClick}>
         {title}
         <span className="request-btn__inner">
           <span className="request-btn__blob"></span>

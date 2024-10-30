@@ -6,6 +6,7 @@ import PriceSale from '../../ui-kit/PriceSale/PriceSale';
 import TechnicSlider from '../TechnicSlider/TechnicSlider';
 import Title from '../../ui-kit/Title/Title';
 import Description from '../../ui-kit/Description/Description';
+import { useNavigate } from 'react-router-dom';
 
 interface ITechnicCardProps {
   technicData: {
@@ -18,6 +19,10 @@ interface ITechnicCardProps {
 }
 
 const TechnicCard: React.FC<ITechnicCardProps> = ({ technicData }) => {
+  const navigate = useNavigate();
+  const handleRequestClick = () => {
+    navigate('/request-rent');
+  };
   return (
     <div className="technic">
       <Title title={technicData.title} />
@@ -34,7 +39,7 @@ const TechnicCard: React.FC<ITechnicCardProps> = ({ technicData }) => {
           <Description description={item} />
         ))}
       </div>
-      <RequestButton title="Записаться" />
+      <RequestButton title="Записаться" onClick={handleRequestClick} />
     </div>
   );
 };

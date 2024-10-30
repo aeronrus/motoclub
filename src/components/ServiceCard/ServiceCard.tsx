@@ -3,6 +3,7 @@ import React from 'react';
 import RequestButton from '../../ui-kit/RequestButton/RequestButton';
 import './ServiceCard.css';
 import PriceSale from '../../ui-kit/PriceSale/PriceSale';
+import { useNavigate } from 'react-router-dom';
 
 interface IServiceCardProps {
   serviceData: {
@@ -12,8 +13,11 @@ interface IServiceCardProps {
     price: string[];
   };
 }
-
 const ServiceCard: React.FC<IServiceCardProps> = ({ serviceData }) => {
+  const navigate = useNavigate();
+  const handleRequestClick = () => {
+    navigate('/request-rent');
+  };
   return (
     <div className="service">
       <img src={serviceData.img} alt="kayo k1" className="service__img" />
@@ -23,7 +27,7 @@ const ServiceCard: React.FC<IServiceCardProps> = ({ serviceData }) => {
         <PriceSale prices={serviceData.price} />
       </div>
       <div>
-        <RequestButton title="Записаться" />
+        <RequestButton title="Записаться" onClick={handleRequestClick} />
       </div>
     </div>
   );

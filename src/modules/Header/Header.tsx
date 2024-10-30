@@ -1,9 +1,13 @@
 import React from 'react';
 import './Header.css';
 import RequestButton from '../../ui-kit/RequestButton/RequestButton';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+  const handleRequestClick = () => {
+    navigate('/request-rent');
+  };
   return (
     <header>
       <div className="container">
@@ -21,9 +25,7 @@ const Header: React.FC = () => {
               <li>Незабываемые эмоции</li>
             </ul>
           </div>
-          <Link className="link" to="/request">
-            <RequestButton title="Хочу на прокат!" />
-          </Link>
+          <RequestButton title="Хочу на прокат!" onClick={handleRequestClick} />
         </div>
       </div>
     </header>
