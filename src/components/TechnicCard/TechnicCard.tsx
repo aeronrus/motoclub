@@ -36,7 +36,7 @@ const TechnicCard: React.FC<ITechnicCardProps> = ({ technicData }) => {
       </div>
       <div className="technic__description">
         {technicData.description.map((item) => (
-          <Description description={item} />
+          <Description key={item} description={item} />
         ))}
       </div>
       <RequestButton title="Записаться" onClick={handleRequestClick} />
