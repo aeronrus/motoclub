@@ -35,7 +35,7 @@ const TechnicSlider: React.FC<ITechnicSliderProps> = ({ data }) => {
       <div className="technicSliderList">
         {data.map((item, id) => (
           <div key={id} className={`${activeId === id ? 'technicSlide active' : 'technicSlide'}`}>
-            <img src={item} alt="item-img" />
+            <img src={item} alt={item} />
           </div>
         ))}
       </div>
