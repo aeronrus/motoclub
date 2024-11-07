@@ -9,8 +9,8 @@ const Contacts: React.FC = () => {
     <article className="contact">
       <div className="container">
         <div className="contacts">
-          <Title title="Контактная информация" />
-          <Title title="Прокат эндуро, мотоциклов и питбайков EndurocaTTT" />
+          <Title key="contact-info" title="Контактная информация" />
+          <Title key="enduro-rental" title="Прокат эндуро, мотоциклов и питбайков EndurocaTTT" />
           <ContactsGeo location="Эндурокат" />
           <ContactList />
         </div>

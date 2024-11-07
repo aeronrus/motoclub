@@ -20,7 +20,7 @@ const ServiceCard: React.FC<IServiceCardProps> = ({ serviceData }) => {
   };
   return (
     <div className="service">
-      <img src={serviceData.img} alt="kayo k1" className="service__img" />
+      <img src={serviceData.img} alt={serviceData.title} className="service__img" />
       <div className="service__title">{serviceData.title}</div>
       <p className="service__description">{serviceData.description}</p>
       <div className="service__price">

@@ -33,7 +33,7 @@ const Sales: React.FC = () => {
             <GradientTitle title="У нас выгодно!" />
           </h1>
           <div className="sales__description">
-            <Subtitle subtitle="Мы ценим доверие наших клиентов, поэтому у нас есть для вас выгодные преодоления" />{' '}
+            <Subtitle subtitle="Мы ценим доверие наших клиентов, поэтому у нас есть для вас выгодные преодоления" />
           </div>
 
           <div className="sales__slider">
