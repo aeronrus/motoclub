@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import RequestButton from '../../ui-kit/RequestButton/RequestButton';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
