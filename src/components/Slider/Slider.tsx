@@ -35,15 +35,8 @@ const Slider: React.FC<ISliderProps> = ({ data }) => {
     <div className="container">
       <div className="slider-wrap">
         <div className="slider__actions">
+          <IconButton key="left" direction="left" onClick={prev} disable={activeId === 0} />
           <IconButton
-            data-testid="left"
-            key="left"
-            direction="left"
-            onClick={prev}
-            disable={activeId === 0}
-          />
-          <IconButton
-            data-testid="right"
             key="right"
             direction="right"
             onClick={next}

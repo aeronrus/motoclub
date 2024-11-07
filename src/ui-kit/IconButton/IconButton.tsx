@@ -20,6 +20,6 @@ const IconButton: React.FC<IIconButtonProps> = ({ direction, onClick, disable })
     cls += ' disable';
   }
 
-  return <div className={cls} data-testid="iconButton" onClick={onClick}></div>;
+  return <div className={cls} data-testid={direction} onClick={onClick}></div>;
 };
 export default IconButton;
