@@ -1,0 +1,35 @@
+.about__item {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-120px);
+  animation: fadeIn 0.8s forwards;
+}
+.about__item img {
+  width: 5em;
+  height: 5em;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Конечное состояние для анимации */
+    transform: translateY(0); /* Возвращаем в исходное положение */
+  }
+}
+/* Задержка для каждого блока при появлении */
+.about__item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 745px) {
+  .about__item {
+  }
+  .about__item img {
+    width: 3.5em;
+    height: 3.5em;
+  }
+}
