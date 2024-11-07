@@ -8,6 +8,7 @@ const MobileNav: React.FC = () => {
     <nav>
       <div className={styles.nav}>
         <div
+          data-testid="iconNav"
           className={styles.nav__toggle}
           onClick={() => {
             setOpen(!open);
@@ -19,7 +20,6 @@ const MobileNav: React.FC = () => {
         <ul
           onClick={() => setOpen(false)}
           className={`${styles.nav__list} ${open ? styles.active : ''}`}>
-          {' '}
           <NavLink className={styles.link} to="/">
             <li className={styles.nav__item}>Главная</li>
           </NavLink>
